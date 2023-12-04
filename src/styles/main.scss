@@ -2,7 +2,7 @@
     --primary-color: #4eab78;
     --primary-color-light100: #093672;
     --primary-color-light200: #1d4a86;
-    --secondary-color: #242424;
+    --secondary-color: #232323;
     --ratings-color: #ffa834;
     --accent-color-4: #42b4e7;
     --light-color: #f7f7f7;
@@ -35,12 +35,13 @@
         -webkit-tap-highlight-color: transparent;
     }
     body {
-        @apply font-normal;
+        @apply font-normal text-theme-secondary;
     }
 }
 
 body {
-    @apply font-theme min-w-[375px];
+    @apply min-w-[375px];
+    font-family: "Open Sans", sans - serif;
 }
 
 .dynamic-text {

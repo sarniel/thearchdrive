@@ -25,9 +25,9 @@ const DetailPage = ({ data }) => {
                 <div className="theme-container">
                     <div className="flex space-x-5">
                         <div>
-                            {" "}
-                            <h1>{item.title}</h1>
+                            <h1 className="text-4xl font-bold">{item.title}</h1>
                             <div
+                                className="layout"
                                 dangerouslySetInnerHTML={{
                                     __html: item.content,
                                 }}
