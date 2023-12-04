@@ -4,22 +4,26 @@ import Seo from "components/seo";
 import Layout from "components/layout";
 
 const CategoryPage = ({ data }) => {
-    const category = data.wpCategory;
+    const item = data.wpCategory;
 
     return (
         <React.Fragment>
             <Layout>
                 <Seo
-                    title={category.seo.title}
+                    title={item.seo.title}
                     description={
-                        category.seo.metaDesc
-                            ? category.seo.metaDesc
-                            : category.seo.opengraphDescription
+                        item.seo.metaDesc
+                            ? item.seo.metaDesc
+                            : item.seo.opengraphDescription
                     }
-                    image={category.seo.opengraphImage?.sourceUrl}
-                    uri={category.seo.opengraphUrl}
+                    image={item.seo.opengraphImage?.sourceUrl}
+                    url={item.seo.opengraphUrl}
+                    publishedTime={item.seo.opengraphPublishedTime}
+                    publisher={item.seo.opengraphPublisher}
+                    modifiedTime={item.seo.opengraphModifiedTime}
+                    type={item.seo.opengraphType}
                 />
-                <h1>{category.name}</h1>
+                <h1>{item.name}</h1>
             </Layout>
         </React.Fragment>
     );
@@ -38,16 +42,7 @@ export const query = graphql`
                     title
                 }
             }
-            seo {
-                title
-                metaDesc
-                canonical
-                opengraphDescription
-                opengraphUrl
-                opengraphImage {
-                    sourceUrl
-                }
-            }
+            ...SeoCategory
         }
     }
 `;

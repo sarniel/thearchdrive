@@ -1,15 +1,36 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const DetailPage = ({ data }) => {
+    const item = data.wpPage;
     return (
         <React.Fragment>
-            {data.wpPage.title}
-            <div>
-                <div
-                    dangerouslySetInnerHTML={{ __html: data.wpPage.content }}
+            <Layout>
+                <Seo
+                    title={item.seo.title}
+                    description={
+                        item.seo.metaDesc
+                            ? item.seo.metaDesc
+                            : item.seo.opengraphDescription
+                    }
+                    image={item.seo.opengraphImage?.sourceUrl}
+                    url={item.seo.opengraphUrl}
+                    publishedTime={item.seo.opengraphPublishedTime}
+                    publisher={item.seo.opengraphPublisher}
+                    modifiedTime={item.seo.opengraphModifiedTime}
+                    type={item.seo.opengraphType}
                 />
-            </div>
+                {data.wpPage.title}
+                <div>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: data.wpPage.content,
+                        }}
+                    />
+                </div>
+            </Layout>
         </React.Fragment>
     );
 };
@@ -22,16 +43,7 @@ export const query = graphql`
             title
             slug
             content
-            seo {
-                title
-                metaDesc
-                canonical
-                opengraphDescription
-                opengraphUrl
-                opengraphImage {
-                    sourceUrl
-                }
-            }
+            ...SeoPage
         }
     }
 `;
