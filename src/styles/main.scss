@@ -41,7 +41,7 @@
 
 body {
     @apply min-w-[375px];
-    font-family: "Open Sans", sans - serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .dynamic-text {
@@ -64,6 +64,27 @@ body {
     @apply text-[12px];
 }
 .layout {
+    .wp-block-image {
+        @apply overflow-hidden rounded-lg;
+    }
+    h1 {
+        @apply text-4xl;
+    }
+    h2 {
+        @apply text-3xl;
+    }
+    h3 {
+        @apply text-2xl;
+    }
+    h4 {
+        @apply text-xl;
+    }
+    h5 {
+        @apply text-lg;
+    }
+    h6 {
+        @apply text-sm;
+    }
     blockquote {
         @apply mb-3 flex items-center border-l border-theme-secondary py-[20px] pl-[20px] text-2xl;
         p {
@@ -87,11 +108,11 @@ body {
             height: 100%;
         }
     }
-    h2 {
-        @apply text-xl font-bold;
+    .wp-element-caption {
+        @apply border-b border-theme-borderColor py-2 text-sm opacity-70;
     }
     p {
-        @apply mb-3 leading-6 last:mb-0;
+        @apply mb-5 leading-7 last:mb-0;
     }
     figure {
         @apply mb-5;
@@ -100,7 +121,7 @@ body {
         @apply mb-3 list-inside list-disc;
     }
     ol {
-        @apply mb-3 list-inside list-decimal;
+        @apply mb-5 list-outside list-decimal pl-[17px];
     }
     .ol-custom {
         line-height: 26px;
@@ -112,6 +133,14 @@ body {
     }
     .wp-block-columns-is-layout-flex {
         @apply sm:flex sm:space-x-5;
+    }
+}
+.sidebar-featured-post {
+    .post-container {
+        @apply flex;
+    }
+    .img-placeholder {
+        @apply w-[100px] flex-none;
     }
 }
 .general-message {

@@ -19,6 +19,7 @@
         "@mkitio/gatsby-theme-password-protect": "^2.1.2",
         "d3-ease": "^3.0.1",
         "gatsby": "^5.12.8",
+        "gatsby-omni-font-loader": "^2.0.2",
         "gatsby-plugin-exclude": "^1.0.2",
         "gatsby-plugin-google-analytics": "^5.11.0",
         "gatsby-plugin-google-gtag": "^5.11.0",

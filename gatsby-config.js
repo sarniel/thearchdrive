@@ -86,6 +86,11 @@ module.exports = {
                 //     },
                 //   },
                 // },
+                exclude: {
+                    taxonomies: {
+                        post_tag: true,
+                    },
+                },
                 schema: {
                     // requestConcurrency: 1,
                     // perPage: 30, // currently set to 100
@@ -100,6 +105,22 @@ module.exports = {
             options: {
                 host: "https://thearchdrive.com/",
                 sitemap: "https://thearchdrive.com/sitemap-0.xml",
+            },
+        },
+        {
+            resolve: `gatsby-omni-font-loader`,
+            options: {
+                enableListener: true,
+                preconnect: [
+                    `https://fonts.googleapis.com`,
+                    `https://fonts.gstatic.com`,
+                ],
+                web: [
+                    {
+                        name: `Open Sans`,
+                        file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap`,
+                    },
+                ],
             },
         },
     ],
