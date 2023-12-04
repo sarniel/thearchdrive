@@ -1,0 +1,44 @@
+.accordion__item {
+  @apply rounded-lg shadow;
+}
+.accordion__button {
+  @apply relative w-full cursor-pointer items-center rounded-lg border border-[#bcbcbc] bg-theme-lightGray p-4 pl-10 text-left text-lg font-semibold;
+  &[aria-expanded="true"] {
+    @apply rounded-b-none border-b-0;
+  }
+}
+
+.accordion__button:before {
+  display: inline-block;
+  content: "";
+  height: 10px;
+  width: 10px;
+  margin-right: 12px;
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  transform-origin: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 15px;
+}
+.accordion__button[aria-expanded="true"]::before,
+.accordion__button[aria-selected="true"]::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+[hidden] {
+  display: none;
+}
+
+.accordion__panel {
+  @apply rounded-b-lg border-t border-b border-l border-r border-[#bcbcbc] p-4 text-base opacity-80;
+  ul {
+    list-style: circle;
+    list-style-position: inside;
+  }
+}

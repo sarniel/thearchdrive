@@ -22,7 +22,20 @@ const DetailPage = ({ data }) => {
                     modifiedTime={item.seo.opengraphModifiedTime}
                     type={item.seo.opengraphType}
                 />
-                {data.wpPost.title}
+                <div className="theme-container">
+                    <div className="flex space-x-5">
+                        <div>
+                            {" "}
+                            <h1>{item.title}</h1>
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: item.content,
+                                }}
+                            />
+                        </div>
+                        <div className="w-[340px] flex-none">[]</div>
+                    </div>
+                </div>
             </Layout>
         </React.Fragment>
     );
@@ -35,6 +48,7 @@ export const query = graphql`
         wpPost(uri: { eq: $uri }) {
             title
             uri
+            content
             ...Seo
         }
     }

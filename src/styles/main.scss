@@ -1,0 +1,307 @@
+:root {
+    --primary-color: #4eab78;
+    --primary-color-light100: #093672;
+    --primary-color-light200: #1d4a86;
+    --secondary-color: #242424;
+    --ratings-color: #ffa834;
+    --accent-color-4: #42b4e7;
+    --light-color: #f7f7f7;
+    --accent-color-0: var(--primary-color);
+    --accent-color-1: #d13636;
+    --accent-color-2: #ffa235;
+    --accent-color-3: #48b946;
+    --accent-color-5: var(--accent-color-3);
+    --accent-color-6: var(--accent-color-4);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "utilities/font-face.scss";
+@import "components/menu.scss";
+@import "components/contact.scss";
+@import "components/swiper.scss";
+@import "components/video.scss";
+@import "components/lightgallery.scss";
+@import "utilities/spacing.scss";
+@import "utilities/post-reset.scss";
+@import "styles/components/faq.scss";
+@import "styles/components/ratings.scss";
+
+@layer base {
+    // remove button tap highlight color on mobile
+    html {
+        -webkit-tap-highlight-color: transparent;
+    }
+    body {
+        @apply font-normal;
+    }
+}
+
+body {
+    @apply font-theme min-w-[375px];
+}
+
+.dynamic-text {
+}
+.theme-red {
+    @apply bg-[var(--accent-color-1)];
+}
+.theme-green {
+    @apply bg-[var(--accent-color-3)];
+}
+.theme-blue {
+    @apply bg-[var(--primary-color)];
+}
+.widget-layout {
+    p {
+        @apply mb-3 leading-5 last:mb-0;
+    }
+}
+.southern-cross-bet-h3 {
+    @apply text-[12px];
+}
+.layout {
+    blockquote {
+        @apply mb-3 flex items-center border-l border-theme-secondary py-[20px] pl-[20px] text-2xl;
+        p {
+            &:first-child {
+                @apply mb-0;
+            }
+        }
+    }
+    .wp-block-embed {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    h2 {
+        @apply text-xl font-bold;
+    }
+    p {
+        @apply mb-3 leading-6 last:mb-0;
+    }
+    figure {
+        @apply mb-5;
+    }
+    ul {
+        @apply mb-3 list-inside list-disc;
+    }
+    ol {
+        @apply mb-3 list-inside list-decimal;
+    }
+    .ol-custom {
+        line-height: 26px;
+        list-style-position: outside;
+        @apply space-y-3 md:ml-[20px];
+    }
+    .wp-block-heading {
+        @apply mb-2;
+    }
+    .wp-block-columns-is-layout-flex {
+        @apply sm:flex sm:space-x-5;
+    }
+}
+.general-message {
+    .heading-footer-text {
+        @apply mb-3 text-center text-xl font-semibold;
+    }
+    a {
+        @apply text-theme-primary;
+    }
+}
+.general-message-side {
+    .heading-footer-text {
+        @apply text-xl font-bold;
+    }
+    a {
+        @apply text-theme-primary;
+    }
+}
+
+.card {
+    @apply rounded-lg border p-5;
+}
+.journey-container {
+    @apply relative;
+    &.dark {
+        @apply min-h-[490px] overflow-hidden;
+        &:before {
+            top: calc(50% - 0px);
+        }
+        .jc-wrap {
+            @apply min-h-[490px];
+            .journey-item {
+                @apply lg:ml-[-140px] xl:w-[365px];
+                .content {
+                    @apply text-white;
+                    p {
+                        @apply text-sm opacity-70;
+                    }
+                }
+                &:nth-child(even) {
+                    @apply sm:flex-col-reverse sm:self-start;
+                    .roadmap-content {
+                        @apply pt-0 pr-0 sm:pb-[100px] sm:pl-[17px];
+                    }
+                    .dot {
+                        @apply sm:bottom-0 sm:top-[auto];
+                        .dot-title {
+                            @apply sm:top-[40px];
+                        }
+                    }
+                }
+                .dot {
+                    .dot-title {
+                        @apply text-lg;
+                    }
+                }
+            }
+        }
+    }
+    &:before {
+        @apply hidden sm:block;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 17px;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(294.72deg, #ff4581 9.05%, #4388dd 79.28%);
+        opacity: 0.1;
+    }
+    .jc-scroll-box {
+        position: relative;
+        height: 100%;
+        max-width: 100%;
+        outline: 0;
+        direction: ltr;
+    }
+    .jc-wrap {
+        @apply space-y-10 p-0 pt-[10px] sm:flex sm:space-y-0;
+        justify-content: flex-end;
+        .journey-item {
+            @apply ml-[17px] flex flex-col items-start sm:ml-[-158px] sm:h-[253px] sm:w-[270px] lg:ml-[-10px] lg:w-[300px] xl:w-[325px];
+            align-self: flex-end;
+            .content {
+                @apply pt-[30px] pl-[10px] text-theme-secondary sm:pt-0 sm:pl-0;
+                h2 {
+                    @apply mb-3 font-bold;
+                }
+                p {
+                    @apply mb-2 text-base font-normal;
+                }
+            }
+        }
+        .journey-title {
+            display: inline-block;
+            color: currentColor;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+            letter-spacing: 0.1em;
+        }
+        .roadmap-content {
+            @apply relative pl-[17px] sm:ml-[57px] sm:pt-[110px];
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 1px;
+                height: 100%;
+                background: currentColor;
+            }
+            .dot {
+                content: "";
+                background: currentColor;
+                position: absolute;
+                left: -8px;
+                top: 0;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                .ping {
+                    background: currentColor;
+                    border-radius: 50%;
+                    content: "";
+                    height: 32px;
+                    left: -8px;
+                    opacity: 0.1;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 32px;
+                    margin: auto;
+                    right: 0;
+                }
+                .dot-title {
+                    @apply absolute top-[-5px] left-[35px] m-auto min-w-[230px] text-3xl sm:-left-[105px] sm:-top-[40px] sm:text-center;
+                }
+            }
+            .title {
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 10px;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.featured-layout {
+    > div {
+        &:first-child {
+            @apply lg:row-span-3 lg:block;
+            .img-placeholder {
+                @apply lg:m-0 lg:aspect-video lg:w-full lg:rounded-b-none lg:p-0;
+                .video-icon {
+                    @apply lg:pointer-events-none lg:absolute lg:top-5 lg:right-6 lg:h-10 lg:w-10 lg:text-white;
+                }
+            }
+            .short-desc {
+                @apply lg:line-clamp-4;
+            }
+        }
+    }
+    > div {
+        @apply flex;
+        .img-placeholder {
+            @apply m-3 mr-0 w-[90px] flex-none rounded-xl sm:w-[130px] lg:w-[240px];
+            order: 2;
+            .video-icon {
+                @apply pointer-events-none absolute top-2 right-2 h-6 w-6 text-white;
+            }
+        }
+    }
+}
+.category-layout {
+    > div {
+        @apply flex sm:block;
+        .img-placeholder {
+            @apply w-[90px] flex-none rounded-xl sm:m-0 sm:h-40 sm:w-full sm:rounded-none;
+            .video-icon {
+                @apply pointer-events-none absolute top-3 right-3 h-6 w-6 text-white;
+            }
+        }
+    }
+}
+
+.active-menu {
+    ~ ul {
+        @apply block lg:hidden;
+    }
+}

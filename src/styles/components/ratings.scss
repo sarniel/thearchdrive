@@ -1,0 +1,64 @@
+.rating {
+  .star {
+    fill: var(--ratings-color);
+    @apply invisible;
+  }
+}
+
+.rating-5 {
+  .star {
+    @apply visible;
+  }
+}
+.rating-4 {
+  .star {
+    &:first-child {
+      @apply visible;
+    }
+    &:first-child + .star {
+      @apply visible;
+    }
+    &:first-child + .star + .star {
+      @apply visible;
+    }
+    &:first-child + .star + .star + .star {
+      @apply visible;
+    }
+  }
+}
+.rating-3 {
+  .star {
+    &:first-child {
+      @apply visible;
+    }
+    &:first-child + .star {
+      @apply visible;
+    }
+    &:first-child + .star + .star {
+      @apply visible;
+    }
+  }
+}
+.rating-2 {
+  .star {
+    &:first-child {
+      @apply visible;
+    }
+    &:first-child + .star {
+      @apply visible;
+    }
+  }
+}
+
+.rating-1 {
+  .star {
+    &:first-child {
+      @apply visible;
+    }
+  }
+}
+
+// New Ratings Image
+.ratings-4-5 {
+  background-size: 20px 20px;
+}
