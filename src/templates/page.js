@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const DetailPage = ({ data }) => {
     const item = data.wpPage;
@@ -22,13 +23,26 @@ const DetailPage = ({ data }) => {
                     modifiedTime={item.seo.opengraphModifiedTime}
                     type={item.seo.opengraphType}
                 />
-                {data.wpPage.title}
-                <div>
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: data.wpPage.content,
-                        }}
-                    />
+                <div className="theme-container flex items-center space-x-20 py-10">
+                    {item.featuredImage ? (
+                        <div className="flex-none">
+                            <GatsbyImage
+                                image={item.featuredImage.node?.gatsbyImage}
+                                alt="Shay Michaela Tan"
+                            />
+                        </div>
+                    ) : null}
+                    <div>
+                        <h1 className="mb-3 text-3xl font-semibold">
+                            {item.title}
+                        </h1>
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: data.wpPage.content,
+                            }}
+                            className="layout"
+                        />
+                    </div>
                 </div>
             </Layout>
         </React.Fragment>
@@ -43,6 +57,11 @@ export const query = graphql`
             title
             slug
             content
+            featuredImage {
+                node {
+                    gatsbyImage(width: 370, height: 451)
+                }
+            }
             ...SeoPage
         }
     }

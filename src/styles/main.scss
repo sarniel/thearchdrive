@@ -64,23 +64,31 @@ body {
     @apply text-[12px];
 }
 .layout {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-semibold;
+    }
     .wp-block-image {
         @apply overflow-hidden rounded-lg;
     }
     h1 {
-        @apply text-4xl;
-    }
-    h2 {
         @apply text-3xl;
     }
-    h3 {
+    h2 {
         @apply text-2xl;
     }
-    h4 {
+    h3 {
         @apply text-xl;
     }
-    h5 {
+    h4 {
         @apply text-lg;
+    }
+    h5 {
+        @apply text-base;
     }
     h6 {
         @apply text-sm;
@@ -129,7 +137,7 @@ body {
         @apply space-y-3 md:ml-[20px];
     }
     .wp-block-heading {
-        @apply mb-2;
+        @apply mb-3;
     }
     .wp-block-columns-is-layout-flex {
         @apply sm:flex sm:space-x-5;
