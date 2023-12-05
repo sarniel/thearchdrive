@@ -2,6 +2,8 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import Seo from "components/seo";
 import Layout from "components/layout";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
+import Post from "../components/post";
 
 const CategoryPage = ({ data }) => {
     const item = data.wpCategory;
@@ -23,7 +25,39 @@ const CategoryPage = ({ data }) => {
                     modifiedTime={item.seo.opengraphModifiedTime}
                     type={item.seo.opengraphType}
                 />
-                <h1>{item.name}</h1>
+                <div className="theme-container">
+                    <div className="mb-14">
+                        <ul className="flex overflow-hidden">
+                            <li className="flex items-center">
+                                <a href="/" className="p-2">
+                                    Home
+                                </a>
+                            </li>
+                            <li className="flex items-center last:opacity-50">
+                                <ChevronRightIcon className="mx-2 w-5 flex-none" />
+                                <div className="line-clamp-1">{item.name}</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="mb-10">
+                        <h1 className="mb-3 text-4xl font-semibold">
+                            {item.name}
+                        </h1>
+                        <div>{item.description}</div>
+                    </div>
+                    <div className="grid grid-cols-3 gap-5">
+                        {item.posts.nodes.map((post, index) => (
+                            <Post
+                                key={index}
+                                title={post.title}
+                                excerpt={post.excerpt}
+                                date={post.date}
+                                link={post.uri}
+                                image={post.featuredImage.node}
+                            ></Post>
+                        ))}
+                    </div>
+                </div>
             </Layout>
         </React.Fragment>
     );
@@ -39,7 +73,7 @@ export const query = graphql`
             link
             posts {
                 nodes {
-                    title
+                    ...FeaturedPost
                 }
             }
             ...SeoCategory
