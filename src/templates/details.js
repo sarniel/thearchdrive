@@ -1,13 +1,17 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Post from "../components/post";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Share from "../components/share";
+import { LinkIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 
 const DetailPage = ({ data }) => {
     const item = data.wpPost;
+    const breadCrumbsArr = item.terms?.nodes.sort((a, b) => {
+        return a.databaseId - b.databaseId;
+    });
     return (
         <React.Fragment>
             <Layout>
@@ -26,6 +30,35 @@ const DetailPage = ({ data }) => {
                     type={item.seo.opengraphType}
                 />
                 <div className="theme-container">
+                    <div className="mb-14">
+                        <ul className="flex overflow-hidden">
+                            <li className="flex items-center">
+                                <a href="/" className="p-2">
+                                    Home
+                                </a>
+                            </li>
+                            {breadCrumbsArr
+                                ? breadCrumbsArr.map((terms, index) => (
+                                      <li
+                                          key={index}
+                                          className="flex items-center last:opacity-50"
+                                      >
+                                          <ChevronRightIcon className="mx-2 w-5 flex-none" />
+                                          <Link
+                                              to={terms.uri}
+                                              className="whitespace-pre"
+                                          >
+                                              {terms.name}
+                                          </Link>
+                                      </li>
+                                  ))
+                                : null}
+                            <li className="flex items-center last:opacity-50">
+                                <ChevronRightIcon className="mx-2 w-5 flex-none" />
+                                <div className="line-clamp-1">{item.title}</div>
+                            </li>
+                        </ul>
+                    </div>
                     <div className="mb-10">
                         <h1 className="mb-2 text-4xl font-bold">
                             {item.title}
@@ -127,6 +160,13 @@ export const query = graphql`
             uri
             content
             date(formatString: "DD  MMMM, YYYY")
+            terms {
+                nodes {
+                    name
+                    databaseId
+                    uri
+                }
+            }
             featuredImage {
                 node {
                     gatsbyImage(width: 1600, height: 900, layout: CONSTRAINED)
