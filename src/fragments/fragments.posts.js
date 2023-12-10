@@ -13,4 +13,16 @@ export const fragmentPosts = graphql`
             }
         }
     }
+    fragment SliderPost on WpPost {
+        title
+        uri
+        link
+        date(formatString: "DD  MMMM, YYYY")
+        excerpt
+        featuredImage {
+            node {
+                gatsbyImage(width: 1600, height: 500, layout: CONSTRAINED)
+            }
+        }
+    }
 `;

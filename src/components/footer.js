@@ -18,7 +18,7 @@ const FooterComponent = () => {
 
     return (
         <React.Fragment>
-            <div className="bg-theme-secondary">
+            <div className="mt-10 bg-theme-secondary">
                 <div className="theme-container grid grid-cols-3 py-10">
                     <div className="space-y-10">
                         <div>

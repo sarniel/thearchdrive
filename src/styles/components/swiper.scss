@@ -3,5 +3,9 @@
 // }
 
 .swiper-button-disabled {
-  @apply opacity-0;
+    @apply opacity-0;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff !important;
 }

@@ -55,7 +55,7 @@ const NavigationMenu = () => {
                                 >
                                     <Link
                                         to={item.uri}
-                                        activeClassName="bg-theme-primary-light200 text-white active-menu"
+                                        activeClassName="bg-theme-secondary text-white active-menu"
                                         className="flex items-center space-x-2 py-3 px-5 lg:rounded-lg lg:py-2"
                                     >
                                         <div className="w-full font-semibold lg:w-auto lg:font-normal">
@@ -74,7 +74,7 @@ const NavigationMenu = () => {
                                                             <Link
                                                                 to={subItem.uri}
                                                                 className="block w-full py-3 px-5"
-                                                                activeClassName="bg-theme-primary-light200 text-white"
+                                                                activeClassName="bg-theme-secondary text-white"
                                                             >
                                                                 {subItem.label}
                                                             </Link>
