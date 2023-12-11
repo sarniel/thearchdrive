@@ -28,7 +28,7 @@ const Homepage = ({ data }) => {
                     type={item.seo.opengraphType}
                 />
                 <div className="theme-container grid grid-flow-row gap-14">
-                    <div className="mt-10">
+                    <div className="mt-5 lg:mt-10">
                         <h2 className="mb-3 text-2xl font-bold">
                             Featured Posts
                         </h2>

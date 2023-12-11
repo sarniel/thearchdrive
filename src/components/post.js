@@ -19,7 +19,7 @@ const Post = (props) => {
                     ) : null}
                 </Link>
 
-                <div className="order-2 px-4 pt-3 pb-4">
+                <div className="order-2 px-2 pt-2 pb-3 lg:px-4 lg:pb-4 lg:pt-3">
                     <Link to={props.link}>
                         <h3 className="text-sm font-semibold text-theme-secondary line-clamp-2 sm:text-lg md:!leading-[24px]">
                             {props.title}

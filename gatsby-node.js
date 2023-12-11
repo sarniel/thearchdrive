@@ -59,7 +59,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const blogPostTemplate = path.resolve(`src/templates/page.js`);
     const result = await graphql(`
         query {
-            allWpPage {
+            allWpPage(filter: { slug: { ne: "contact-us" } }) {
                 edges {
                     node {
                         slug
