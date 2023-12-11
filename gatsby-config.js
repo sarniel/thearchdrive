@@ -164,6 +164,10 @@ module.exports = {
                                 uri
                                 modifiedGmt(formatString: "YYYY-MM-DD HH:mm Z")
                             }
+                        ... on WpPage {
+                                uri
+                                modifiedGmt(formatString: "YYYY-MM-DD HH:mm Z")
+                            }
                         }
                     }
                 }
