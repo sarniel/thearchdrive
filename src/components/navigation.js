@@ -35,7 +35,7 @@ const NavigationMenu = () => {
             <nav className="lg:bg-white">
                 {isOpen ? (
                     <div
-                        className="fixed top-0 left-0 top-[55px] z-20 h-full w-full bg-black opacity-40 lg:hidden"
+                        className="fixed top-0 left-0 top-[65px] z-20 h-full w-full bg-black opacity-40 lg:hidden"
                         onClick={toggleNavigationHandler}
                         aria-hidden="true"
                     ></div>
@@ -43,7 +43,7 @@ const NavigationMenu = () => {
 
                 <div>
                     <div
-                        className={`fixed top-[55px] left-0 z-20 h-[calc(100vh-55px)] w-[70%] max-w-[300px] overflow-auto bg-[#f9f9f9] pb-5 shadow transition lg:relative lg:top-0 lg:flex lg:h-full lg:w-full lg:max-w-[100%] lg:translate-x-0 lg:items-center lg:overflow-visible lg:bg-transparent lg:pb-0 lg:shadow-none lg:transition-none ${
+                        className={`fixed top-[65px] left-0 z-20 h-[calc(100vh-65px)] w-[70%] max-w-[300px] overflow-auto bg-[#f9f9f9] pb-5 shadow transition lg:relative lg:top-0 lg:flex lg:h-full lg:w-full lg:max-w-[100%] lg:translate-x-0 lg:items-center lg:overflow-visible lg:bg-transparent lg:pb-0 lg:shadow-none lg:transition-none ${
                             isOpen ? "translate-x-0" : "-translate-x-full"
                         }`}
                     >
@@ -107,7 +107,7 @@ const NavigationMenu = () => {
                     </div>
                 </div>
                 <button
-                    className="absolute top-0 left-0 ml-auto flex h-[55px] items-center justify-center bg-theme-primary px-2 lg:hidden"
+                    className="absolute top-0 left-0 ml-auto flex h-[65px] items-center justify-center bg-theme-secondary px-2 lg:hidden"
                     onClick={toggleNavigationHandler}
                 >
                     {isOpen ? (

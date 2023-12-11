@@ -26,7 +26,7 @@ const CategoryPage = ({ data }) => {
                     type={item.seo.opengraphType}
                 />
                 <div className="theme-container">
-                    <div className="mb-14">
+                    <div className="mb-5 lg:mb-14">
                         <ul className="flex overflow-hidden">
                             <li className="flex items-center">
                                 <a href="/" className="p-2">
@@ -40,12 +40,12 @@ const CategoryPage = ({ data }) => {
                         </ul>
                     </div>
                     <div className="mb-10">
-                        <h1 className="mb-3 text-4xl font-semibold">
+                        <h1 className="mb-2 text-3xl font-bold lg:text-4xl">
                             {item.name}
                         </h1>
                         <div>{item.description}</div>
                     </div>
-                    <div className="grid grid-cols-3 gap-5">
+                    <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
                         {item.posts.nodes.map((post, index) => (
                             <Post
                                 key={index}

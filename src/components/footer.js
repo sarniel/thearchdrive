@@ -19,7 +19,7 @@ const FooterComponent = () => {
     return (
         <React.Fragment>
             <div className="mt-10 bg-theme-secondary">
-                <div className="theme-container grid grid-cols-3 py-10">
+                <div className="theme-container grid py-10 lg:grid-cols-3">
                     <div className="space-y-10">
                         <div>
                             <StaticImage
@@ -38,8 +38,8 @@ const FooterComponent = () => {
                     </div>
                 </div>
                 <div className="theme-container text-xs text-white">
-                    <div className="grid grid-cols-2 border-t border-theme-borderColor/20 py-5">
-                        <div className="flex items-center space-x-10 opacity-50">
+                    <div className="border-t border-theme-borderColor/20 py-5 lg:grid lg:grid-cols-2">
+                        <div className="items-center opacity-50 lg:flex lg:space-x-10">
                             <div>The Architects Drive, Copyright 2023.</div>
                             <ul className="flex items-center space-x-3">
                                 {data.allWpMenuItem.nodes.map((menu, index) => (
@@ -49,7 +49,7 @@ const FooterComponent = () => {
                                 ))}
                             </ul>
                         </div>
-                        <div className="ml-auto flex space-x-3">
+                        <div className="ml-auto flex space-x-3 pt-3 lg:pt-0">
                             <a
                                 href="https://www.facebook.com/thearchdrive"
                                 rel="nofollow"

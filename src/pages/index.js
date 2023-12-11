@@ -45,7 +45,7 @@ const Homepage = ({ data }) => {
                             ))}
                         </div>
                     </div>
-                    <div className="grid grid-flow-col gap-4">
+                    <div className="grid grid-cols-3 gap-4 md:grid-flow-col">
                         {category.map((cat, index) => (
                             <Link
                                 to={cat.uri}
@@ -62,7 +62,9 @@ const Homepage = ({ data }) => {
                                         fillRule="evenodd"
                                     ></path>
                                 </svg>
-                                <h2 className="mt-3 text-lg">{cat.name}</h2>
+                                <h2 className="text-md mt-3 md:text-lg">
+                                    {cat.name}
+                                </h2>
                             </Link>
                         ))}
                     </div>
@@ -70,7 +72,7 @@ const Homepage = ({ data }) => {
                         <h2 className="mb-3 text-2xl font-bold">
                             {page.featuredHeadingTitle}
                         </h2>
-                        <div className="grid grid-cols-4 gap-4">
+                        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
                             {page.featuredPostItem.map((post, index) => (
                                 <Post
                                     key={index}
@@ -90,7 +92,7 @@ const Homepage = ({ data }) => {
                         <h2 className="mb-3 text-2xl font-bold">
                             {page.featuredHeadingTitle}
                         </h2>
-                        <div className="grid grid-cols-4 gap-4">
+                        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
                             {page.featuredPostItem2.map((post, index) => (
                                 <Post
                                     key={index}

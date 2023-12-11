@@ -7,7 +7,7 @@ const HeaderComponent = ({ children }) => {
         <React.Fragment>
             <div className="mb-3 py-3 shadow">
                 <div className="theme-container flex items-center">
-                    <div>
+                    <div className="ml-10 lg:ml-0">
                         <a href="/" alt="home">
                             <StaticImage
                                 src="../../static/images/thearchdrive-logo.png"

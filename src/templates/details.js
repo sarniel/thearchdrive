@@ -30,7 +30,7 @@ const DetailPage = ({ data }) => {
                     type={item.seo.opengraphType}
                 />
                 <div className="theme-container">
-                    <div className="mb-14">
+                    <div className="mb-5 lg:mb-14">
                         <ul className="flex overflow-hidden">
                             <li className="flex items-center">
                                 <a href="/" className="p-2">
@@ -60,10 +60,10 @@ const DetailPage = ({ data }) => {
                         </ul>
                     </div>
                     <div className="mb-10">
-                        <h1 className="mb-2 text-4xl font-bold">
+                        <h1 className="mb-2 text-3xl font-bold lg:text-4xl">
                             {item.title}
                         </h1>
-                        <div className="mb-5 flex items-center">
+                        <div className="mb-5 items-center space-y-3 lg:flex lg:space-y-0">
                             <div className="opacity-70">
                                 By Thearchdrive on {item.date}
                             </div>
@@ -86,7 +86,7 @@ const DetailPage = ({ data }) => {
                             className="mt-2 text-sm opacity-80"
                         />
                     </div>
-                    <div className="flex space-x-10">
+                    <div className="flex flex-col lg:flex-row lg:space-x-10">
                         <div>
                             <div
                                 className="layout"
@@ -95,7 +95,7 @@ const DetailPage = ({ data }) => {
                                 }}
                             />
                         </div>
-                        <div className="w-[340px] flex-none">
+                        <div className="mt-10 w-[340px] flex-none lg:mt-0">
                             {item.acfSinglePost.widgetRelatedPostLabel ? (
                                 <div className="sidebar-featured-post">
                                     <h2 className="mb-5 text-3xl">
@@ -129,7 +129,7 @@ const DetailPage = ({ data }) => {
                             <h2 className="mb-5 text-3xl">
                                 {item.acfSinglePost.relatedPostLabel}
                             </h2>
-                            <div className="grid grid-cols-3 gap-5">
+                            <div className="grid grid-cols-2 gap-5 lg:grid-cols-3">
                                 {item.acfSinglePost.releatedPost.map(
                                     (post, index) => (
                                         <Post
