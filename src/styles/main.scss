@@ -94,7 +94,7 @@ body {
         @apply text-sm;
     }
     blockquote {
-        @apply mb-3 flex items-center border-l border-theme-secondary py-[20px] pl-[20px] text-2xl;
+        @apply mb-3 flex items-center border-l border-theme-secondary py-[20px] pl-[20px] text-base lg:text-2xl;
         p {
             &:first-child {
                 @apply mb-0;
