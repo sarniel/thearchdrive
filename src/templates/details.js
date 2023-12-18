@@ -98,7 +98,7 @@ const DetailPage = ({ data }) => {
                         <div className="mt-10 w-[340px] flex-none lg:mt-0">
                             {item.acfSinglePost.widgetRelatedPostLabel ? (
                                 <div className="sidebar-featured-post">
-                                    <h2 className="mb-5 text-3xl">
+                                    <h2 className="mb-5 text-2xl">
                                         {
                                             item.acfSinglePost
                                                 .widgetRelatedPostLabel
