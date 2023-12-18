@@ -36,7 +36,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const categoryTemplate = path.resolve(`src/templates/category.js`);
     const resultCategory = await graphql(`
         query {
-            allWpCategory {
+            allWpCategory(filter: { count: { gt: 0 } }) {
                 edges {
                     node {
                         link

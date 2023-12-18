@@ -11,6 +11,7 @@ const NavigationMenu = () => {
         query {
             allWpMenuItem(
                 filter: { parentId: { eq: null }, locations: { eq: PRIMARY } }
+                sort: { order: ASC }
             ) {
                 nodes {
                     label

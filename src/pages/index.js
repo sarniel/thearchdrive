@@ -45,12 +45,12 @@ const Homepage = ({ data }) => {
                             ))}
                         </div>
                     </div>
-                    <div className="grid grid-cols-3 gap-4 md:grid-flow-col">
+                    <div className="grid grid-cols-3 gap-4 md:grid-cols-7">
                         {category.map((cat, index) => (
                             <Link
                                 to={cat.uri}
                                 key={index}
-                                className="rounded-md py-4 px-5 shadow-lg"
+                                className="w-full rounded-md py-4 px-5 shadow-lg"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
