@@ -87,24 +87,6 @@ const NavigationMenu = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="mx-5 mt-5 grid h-10 grid-flow-col items-center rounded-lg bg-theme-primary-light text-center text-white lg:hidden">
-                            <a
-                                href="https://okebet.com.au/"
-                                target="_blank"
-                                className="font-semibold"
-                                rel="noreferrer"
-                            >
-                                Login
-                            </a>
-                            <a
-                                href="https://okebet.com.au/registration/step-1"
-                                target="_blank"
-                                className="border-l border-white/20 font-semibold"
-                                rel="noreferrer"
-                            >
-                                Join
-                            </a>
-                        </div>
                     </div>
                 </div>
                 <button
