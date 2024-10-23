@@ -124,29 +124,6 @@ module.exports = {
             },
         },
         {
-            resolve: "gatsby-plugin-google-tagmanager",
-            options: {
-                id: "G-3FY28WF20M",
-                includeInDevelopment: false,
-            },
-        },
-        {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: "UA-238146197-1",
-                head: true,
-                anonymize: true,
-                respectDNT: true,
-                pageTransitionDelay: 0,
-            },
-        },
-        {
-            resolve: `gatsby-plugin-google-adsense`,
-            options: {
-                publisherId: `ca-pub-2452081808089907`,
-            },
-        },
-        {
             resolve: "gatsby-plugin-sitemap",
             options: {
                 query: `
