@@ -42,5 +42,22 @@ export const onRenderBody = ({ setHeadComponents }) => {
             }}
             key="adsense-config"
         />,
+        // Google Tag Manager (gtag.js)
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-V98T1X2VX0"
+            key="gtag"
+        />,
+        <script
+            dangerouslySetInnerHTML={{
+                __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-V98T1X2VX0');
+        `,
+            }}
+            key="gtag-config"
+        />,
     ]);
 };

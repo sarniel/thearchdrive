@@ -1040,7 +1040,7 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
-"@babel/runtime@^7.16.7", "@babel/runtime@^7.17.9", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4":
+"@babel/runtime@^7.16.7", "@babel/runtime@^7.17.9", "@babel/runtime@^7.3.4":
   version "7.23.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.5.tgz#11edb98f8aeec529b82b211028177679144242db"
   integrity sha512-NdUTHcPe4C99WxPub+K9l9tK5/lV4UXIoaHSYgzco9BCyjKAAwzdBI+wWtYqHt7LJdbo74ZjRPJgzVweq1sz0w==
@@ -6044,38 +6044,6 @@ gatsby-plugin-exclude@^1.0.2:
   integrity sha512-qqnrAImVDuX1OygjDc8rFW/vUHifd/jTTKo05zKsCdtgwbfF3qGv6FiB7H5j5CyneboboDkt/mvN98G6ra7cDA==
   dependencies:
     multimatch "^4.0.0"
-
-gatsby-plugin-google-adsense@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-adsense/-/gatsby-plugin-google-adsense-1.1.3.tgz#267e24880a7634d988bb09b920a115a80f826d55"
-  integrity sha512-tzEg4UIMXCTn+NSB580jzvOgDVTY/+ZbSwQ0EfHUDDqdnvI5KnSQP84mGC5bd96Qy9L15+l9ZRtZ17EdoKBe7g==
-  dependencies:
-    "@babel/runtime" "^7.2.0"
-
-gatsby-plugin-google-analytics@^5.11.0:
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-5.12.0.tgz#1b5ff49f6becb52a5576db60b0a038a211063889"
-  integrity sha512-rbAjx+O42oxyQNqg5TOTxuiR9buOJ3lkVpn3/v8+4jr+MDAHVhVotzA7ELcogphL/AUioIZVYZnvUrKxdK7MQQ==
-  dependencies:
-    "@babel/runtime" "^7.20.13"
-    minimatch "^3.1.2"
-    web-vitals "^1.1.2"
-
-gatsby-plugin-google-gtag@^5.13.1:
-  version "5.13.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-5.13.1.tgz#81b294f2ab12dad5ba5e9946e4b78cd315676bbc"
-  integrity sha512-aaJKIDwUWwhooJnalse1uvcusBmCwCVK33pp1IrDU02E7IohMen3eR5TsjLbfKO7Z+SbfKJEqUoi/r0ozrJarA==
-  dependencies:
-    "@babel/runtime" "^7.20.13"
-    minimatch "^3.1.2"
-
-gatsby-plugin-google-tagmanager@^5.11.0:
-  version "5.12.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-5.12.3.tgz#b9e3a9825c4afb77b60d5da20d6091cc55b8c11d"
-  integrity sha512-qq5S+YmyZkC4LM6eRG24r3CqeIzdUZhcsR/x4MwJOYbIsy/X+Ify43YpQWlCrG2Mkbd0vMuyiRsv4IMELaB38g==
-  dependencies:
-    "@babel/runtime" "^7.20.13"
-    web-vitals "^1.1.2"
 
 gatsby-plugin-image@^3.8.0:
   version "3.8.0"
@@ -11873,11 +11841,6 @@ weak-lru-cache@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/weak-lru-cache/-/weak-lru-cache-1.2.2.tgz#fdbb6741f36bae9540d12f480ce8254060dccd19"
   integrity sha512-DEAoo25RfSYMuTGc9vPJzZcZullwIqRDSI9LOy+fkCJPi6hykCnfKaXTuPBDuXAUcqHXyOgFtHNp/kB2FjYHbw==
-
-web-vitals@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-1.1.2.tgz#06535308168986096239aa84716e68b4c6ae6d1c"
-  integrity sha512-PFMKIY+bRSXlMxVAQ+m2aw9c/ioUYfDgrYot0YUa+/xa0sakubWhSDyxAKwzymvXVdF4CZI71g06W+mqhzu6ig==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
